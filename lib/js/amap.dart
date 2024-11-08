@@ -25,7 +25,7 @@ class AMap {
   // duration (Number?) 如果使用动画过度，动画过度的时长控制，单位 ms，默认值是内部自动计算的一个动态值。
   external setCenter(
     LngLat center,
-    bool immediately,
+    bool? immediately,
     int? duration,
   );
 
