@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   web: ^0.5.1
   plugin_platform_interface: ^2.0.2
+  js: 0.7.1
 
 dev_dependencies:
   flutter_test:
@@ -35,11 +36,6 @@ flutter:
   # This is required for using `dart:ffi`.
   # All these are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
-  plugin:
-    platforms:
-      web:
-        pluginClass: FlutterWebAmapWeb
-        fileName: flutter_web_amap_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
