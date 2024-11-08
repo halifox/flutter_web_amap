@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:flutter_web_amap/flutter_web_amap.dart';
+import 'package:flutter_web_amap/amap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,47 +13,41 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-  final _flutterWebAmapPlugin = FlutterWebAmap();
-
   @override
   void initState() {
     super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion =
-          await _flutterWebAmapPlugin.getPlatformVersion() ?? 'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
+        body: AMapView(
+          loaderOptions: LoaderOptions(
+            key: "21ddb39aa5593f6ebc311ec051441f06",
+            version: '2.0',
+            plugins: [
+              PLUGIN_GEO_LOCATION,
+              PLUGIN_PLACE_SEARCH,
+              PLUGIN_SCALE,
+              PLUGIN_TOOL_BAR,
+              PLUGIN_AUTO_COMPLETE,
+            ],
+          ),
+          onAMapViewCreated: (AMapController controller) async {
+            Scale scale = Scale(ControlConfig());
+            controller.addControl(scale);
+
+            Geolocation geolocation = Geolocation(GeolocationOptions());
+            controller.addControl(geolocation);
+
+            GeolocationResult result = await executeAsync<GeolocationResult>(
+                (callback) => geolocation.getCurrentPosition(callback));
+            print(
+                "当前位置:${result.position.getLat()} ${result.position.getLng()}");
+          },
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
+        // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }
