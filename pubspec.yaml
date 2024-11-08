@@ -1,5 +1,5 @@
 name: flutter_web_amap
-description: "A new Flutter plugin project."
+description: "AMAP plugin designed for Flutter projects that run only on the Web platform"
 version: 0.0.1
 homepage:
 
@@ -10,10 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_web_plugins:
-    sdk: flutter
-  web: ^0.5.1
-  plugin_platform_interface: ^2.0.2
   js: 0.7.1
 
 dev_dependencies:
