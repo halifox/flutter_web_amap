@@ -110,14 +110,14 @@ print("Latitude: ${result.position.getLat()}, Longitude: ${result.position.getLn
 - [ ] 地图
   - [x] Map
   - [ ] MapsEvent
-- [ ] 高德官方图层
-  - [ ] TileLayer
-  - [ ] Traffic
-  - [ ] Satellite
-  - [ ] RoadNet
-  - [ ] Buildings
-  - [ ] DistrictLayer
-  - [ ] IndoorMap
+- [x] 高德官方图层
+  - [x] TileLayer
+  - [x] Traffic
+  - [x] Satellite
+  - [x] RoadNet
+  - [x] Buildings
+  - [x] DistrictLayer
+  - [x] IndoorMap
 - [ ] 行业标准图层
   - [ ] WMS
   - [ ] WMTS
