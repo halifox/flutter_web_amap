@@ -94,3 +94,135 @@ print("Latitude: ${result.position.getLat()}, Longitude: ${result.position.getLn
     - `allowInteropCaptureThis`：用于处理需要捕获 this 上下文的情况。
 
 - Map 不能直接转化为 Javascript 对象，为了绕过这个限制，我们需要使用`@anonymous`创建一个 "匿名"类。
+
+
+## 进度
+
+在阅读《相关文档》和《笔记》后，可以根据项目内现有的格式，并参照《高德开放平台-参考手册》，完成剩余进度。
+
+- [x] 基础类
+  - [x] LngLat
+  - [x] Bounds
+  - [x] Pixel
+  - [x] Size
+- [ ] 事件
+  - [ ] Event
+- [ ] 地图
+  - [x] Map
+  - [ ] MapsEvent
+- [ ] 高德官方图层
+  - [ ] TileLayer
+  - [ ] Traffic
+  - [ ] Satellite
+  - [ ] RoadNet
+  - [ ] Buildings
+  - [ ] DistrictLayer
+  - [ ] IndoorMap
+- [ ] 行业标准图层
+  - [ ] WMS
+  - [ ] WMTS
+  - [ ] MapboxVectorTileLayer
+- [ ] 自有数据图层
+  - [ ] HeatMap
+  - [ ] VectorLayer
+  - [ ] LabelsLayer
+  - [ ] CustomLayer
+  - [ ] Flexible
+  - [ ] ImageLayer
+  - [ ] CanvasLayer
+  - [ ] GLCustomLayer
+- [ ] 点标记
+  - [x] Marker
+  - [x] Text
+  - [x] Icon
+  - [ ] LabelMarker
+  - [ ] ElasticMarker
+  - [ ] MarkerCluster
+  - [ ] MassMarks
+  - [ ] MoveAnimation
+  - [ ] AnimationCallback
+  - [ ] EasingCallback
+- [ ] 信息窗体
+  - [ ] InfoWindow
+- [ ] 右键菜单
+  - [ ] ContextMenu
+- [ ] 矢量图形
+  - [ ] Polygon
+  - [ ] Polyline
+  - [ ] BezierCurve
+  - [ ] Circle
+  - [ ] CircleMarker
+  - [ ] Ellipse
+  - [ ] Rectangle
+  - [ ] GeoJSON
+- [ ] 群组
+  - [ ] LayerGroup
+  - [ ] OverlayGroup
+- [x] 地图控件
+  - [x] Control
+  - [x] Scale
+  - [x] ToolBar
+  - [x] ControlBar
+  - [x] MapType
+  - [x] HawkEye
+- [ ] 工具类
+  - [ ] RangingTool
+  - [ ] MouseTool
+  - [ ] PolygonEditor
+  - [ ] PolylineEditor
+  - [ ] CircleEditor
+  - [ ] BezierCurveEditor
+  - [ ] EllipseEditor
+  - [ ] RectangleEditor
+- [ ] 服务类
+  - [ ] WebService
+  - [ ] WebServiceCallback
+- [ ] 搜索
+  - [x] AutoComplete
+  - [x] AutoCompleteSearchCallback
+  - [x] PlaceSearch
+  - [x] searchCallback
+  - [ ] CloudDataSearch
+  - [ ] CloudDataSearchCallback
+- [ ] 地理编码
+  - [ ] Geocoder
+  - [ ] GeocoderCallback
+  - [ ] ReGeocoderCallback
+  - [ ] convertFrom
+- [ ] 路线规划
+  - [ ] Driving
+  - [ ] DrivingCallback
+  - [ ] DrivingResult
+  - [ ] DriveStepBasic
+  - [ ] DriveStepDetail
+  - [ ] TruckDriving
+  - [ ] Walking
+  - [ ] WalkingCallback
+  - [ ] WalkingResult
+  - [ ] Transfer
+  - [ ] TransferCallback
+  - [ ] TransferResult
+  - [ ] Riding
+  - [ ] RidingCallback
+  - [ ] RidingResult
+  - [ ] DragRoute
+  - [ ] DragRouteTruck
+  - [ ] GraspRoad
+  - [ ] GraspRoadCallback
+- [ ] 其他服务
+  - [ ] DistrictSearch
+  - [ ] Weather
+  - [ ] WeatherLiveResult
+  - [ ] WeatherForecastResult
+  - [ ] StationSearch
+  - [ ] LineSearch
+- [ ] 定位
+  - [x] Geolocation
+  - [x] GeolocationCallBack
+  - [x] GeolocationResult
+  - [ ] CitySearch
+- [ ] 通用库
+  - [ ] GeometryUtil
+  - [ ] DomUtil
+  - [ ] Browser
+  - [ ] Util 
