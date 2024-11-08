@@ -95,6 +95,7 @@ print("Latitude: ${result.position.getLat()}, Longitude: ${result.position.getLn
 
 - Map 不能直接转化为 Javascript 对象，为了绕过这个限制，我们需要使用`@anonymous`创建一个 "匿名"类。
 
+- 来自JavaScript的数组实例总是List<dynamic>JavaScript数组没有具体的元素类型，因此JavaScript函数返回的数组不能在不检查每个元素的情况下保证其元素类型。
 
 ## 进度
 
