@@ -49,11 +49,11 @@ AMapView(
 
 [示例代码](example/lib/main.dart)
 
-### 文档
+## 文档
 
 [高德开放平台-参考手册](https://lbs.amap.com/api/javascript-api-v2/documentation)
 
-### 工具函数
+## 工具函数
 
 1. `Future<T> executeAsync<T>(Function(ResultCallback<T> callback) operation)`
 
@@ -69,18 +69,18 @@ GeolocationResult result = await executeAsync<GeolocationResult>((callback) =>
 print("Latitude: ${result.position.getLat()}, Longitude: ${result.position.getLng()}");
 ```
 
-### 注意事项
+## 注意事项
 
 - **安全配置**：确保 `securityJsCode` 和 `key` 值为您在高德平台申请的合法凭证。
 - **Web 支持**：该插件仅支持 Web 端使用，确保项目的 `index.html` 文件正确加载高德地图的 JavaScript SDK。
 
-### 相关文档
+## 相关文档
 
 - [Creating a Dart-to-Javascript interop library](https://medium.com/@thebosz/creating-a-dart-to-javascript-interop-library-c97da204c34a)
 
 - [History of JS interop in Dart](https://medium.com/dartlang/history-of-js-interop-in-dart-98b06991158f)
 
-### 笔记
+## 笔记
 
 - 使用魔法注解`@JS()`允许我们声明 API 签名
     - @JS 注解用于将 Dart 类、函数或变量暴露给 JavaScript，或者访问 JavaScript 中的对象。
@@ -95,7 +95,7 @@ print("Latitude: ${result.position.getLat()}, Longitude: ${result.position.getLn
 
 - Map 不能直接转化为 Javascript 对象，为了绕过这个限制，我们需要使用`@anonymous`创建一个 "匿名"类。
 
-### License
+## License
 
 ```
 Copyright 2019 Square, Inc.
